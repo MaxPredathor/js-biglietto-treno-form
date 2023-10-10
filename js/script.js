@@ -11,16 +11,17 @@ console.log(button);
 button.addEventListener('click', function(){
     const name = document.getElementById('nameInput').value;
     const km = parseInt(document.getElementById('km').value);
-   if(name === '' || typeof name === 'number'){
+   if(name === '' || !isNaN(parseInt(name))){
        alert('Devi inserire valori corretti')
        console.log(name);
-       console.log(km);
-   }else if(km === '' || isNaN(km)){
+   } 
+    console.log(name);
+   
+
+   if(km === '' || isNaN(km)){
        alert('Devi inserire valori corretti')
-       console.log(name);
        console.log(km);
    } else{
-       console.log(name);
        console.log(km);
    }
 })
