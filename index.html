@@ -11,31 +11,54 @@
         <div class="wrapper">
             <div class="container mt-5">
                 <div class="card my-background">
-                    <div class="card-header my-red-border">
+                    <div class="card-header my-red-border text-light">
                       Crea il tuo biglietto Personalizzato
                     </div>
                     <div class="card-body">
                         <form action="">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" id="nameInput" placeholder="Nome & Cognome" aria-label="Username">
-                                <input type="text" class="form-control" id="km" placeholder="Kilometri da Percorrere" aria-label="Server">
-                                <select class="form-select" id="age" aria-label="Default select example">
-                                    <option selected value="maggiorenne">Maggiorenne</option>
-                                    <option value="minorenne">Minorenne</option>
-                                    <option value="over">Over 65</option>
+                                <input type="text" class="form-control fw-bold" id="nameInput" placeholder="Nome & Cognome" aria-label="Username">
+                                <input type="text" class="form-control fw-bold" id="km" placeholder="Kilometri da Percorrere" aria-label="Server">
+                                <select class="form-select fw-bold" id="age" aria-label="Default select example">
+                                    <option selected value="Maggiorenne">Maggiorenne</option>
+                                    <option value="Minorenne">Minorenne</option>
+                                    <option value="Over 65">Over 65</option>
                                 </select>
                                 <div class="col-12 mt-3 d-flex justify-content-between">
                                     <button class="btn btn-primary" type="button">Conferma</button>
-                                    <button class="btn btn-danger ms-2" type="button">Annulla</button>
+                                    <a class="btn btn-danger ms-2" href="index.html" type="button">Annulla</a>
                                 </div>
                             </div>
                         </form>    
                     </div>
-                    <div class="card-body">
+                    <div class="card-body d-none">
                        <div class="container">
                         <div class="row">
-                            <div class="col-4">1</div>
-                            <div class="col-8">2</div>
+                            <h3 class="text-light fw-bold">Dettaglio Passeggeri</h3>
+                            <div class="col-4">
+                                <h5 class="fw-bold">Nome Passeggero:</h5>
+                                <h6 class="fw-bold fs-3" id="nomePasseggero"></h6>
+                            </div>
+                            <div class="col-8">
+                                <table class="table w-75 my-table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Offerta</th>
+                                        <th scope="col">Carrozza</th>
+                                        <th scope="col">Codice CP</th>
+                                        <th scope="col">Costo Biglietto</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th id="tipoBiglietto"></th>
+                                        <td>5</td>
+                                        <td>92911</td>
+                                        <td id="costoBiglietto"></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
                         </div>
                        </div> 
                     </div>

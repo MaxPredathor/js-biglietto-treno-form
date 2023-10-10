@@ -1,8 +1,7 @@
 let costoTotale
 
 const tariffa = 0.21;
-const scontoVenti = 20/100;
-const scontoQuaranta = 40/100
+const biglietto = document.querySelector('.d-none');
 
 
 const button = document.querySelector('.btn-primary');
@@ -21,17 +20,38 @@ button.addEventListener('click',
         }else if(km === '' || isNaN(km)){
             alert('Devi inserire valori corretti')
         }else{
+            document.getElementById('nomePasseggero').innerHTML = `
+            ${name}
+            `
 
             const costoTotale = km * tariffa;
             
-            if(age === 'minorenne'){
-                result = costoTotale - (costoTotale * scontoVenti)
-            }else if(age ==='over'){
-                result = costoTotale - (costoTotale * scontoQuaranta)
+            if(age === 'Minorenne'){
+                result = costoTotale - (costoTotale * 0.20)
+                console.log(age)
+            }else if(age ==='Over 65'){
+                result = costoTotale - (costoTotale * 0.40)
             }else {
                 result = costoTotale
             }
-            console.log(result)
+            document.getElementById('costoBiglietto').innerHTML = `
+                ${result.toFixed(2)}
+            `
+
+            if(age === 'minorenne'){
+                document.getElementById('tipoBiglietto').innerHTML = `
+                ${name}
+            `
+            }else if(age ==='Over 65'){
+                document.getElementById('tipoBiglietto').innerHTML = `
+                ${age}
+            `
+            }else {
+                document.getElementById('tipoBiglietto').innerHTML = `
+                ${age}
+            `
+            }
+            biglietto.classList.remove('d-none');
         }
 })
 // if(parseInt(km)){  
@@ -59,7 +79,3 @@ button.addEventListener('click',
 // }else {
 //     costoTotale = costo
 // }
-
-// document.getElementById('text').innerHTML = `
-// ${costoTotale.toFixed(2)}
-// `
