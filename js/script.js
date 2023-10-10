@@ -11,19 +11,28 @@ console.log(button);
 button.addEventListener('click',
 
     function(){
+
         const name = document.getElementById('nameInput').value;
         const km = parseInt(document.getElementById('km').value);
+        const age = document.getElementById('age').value;
+
         if(name === '' || !isNaN(parseInt(name))){
             alert('Devi inserire valori corretti')
-            } 
-        console.log(name);
-   
-
-        if(km === '' || isNaN(km)){
+        }else if(km === '' || isNaN(km)){
             alert('Devi inserire valori corretti')
-           
-            } 
-        console.log(km);
+        }else{
+
+            const costoTotale = km * tariffa;
+            
+            if(age === 'minorenne'){
+                result = costoTotale - (costoTotale * scontoVenti)
+            }else if(age ==='over'){
+                result = costoTotale - (costoTotale * scontoQuaranta)
+            }else {
+                result = costoTotale
+            }
+            console.log(result)
+        }
 })
 // if(parseInt(km)){  
 //  }else{
