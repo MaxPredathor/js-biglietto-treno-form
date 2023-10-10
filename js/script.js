@@ -8,22 +8,22 @@ const scontoQuaranta = 40/100
 const button = document.querySelector('.btn-primary');
 console.log(button);
 
-button.addEventListener('click', function(){
-    const name = document.getElementById('nameInput').value;
-    const km = parseInt(document.getElementById('km').value);
-   if(name === '' || !isNaN(parseInt(name))){
-       alert('Devi inserire valori corretti')
-       console.log(name);
-   } 
-    console.log(name);
+button.addEventListener('click',
+
+    function(){
+        const name = document.getElementById('nameInput').value;
+        const km = parseInt(document.getElementById('km').value);
+        if(name === '' || !isNaN(parseInt(name))){
+            alert('Devi inserire valori corretti')
+            } 
+        console.log(name);
    
 
-   if(km === '' || isNaN(km)){
-       alert('Devi inserire valori corretti')
-       console.log(km);
-   } else{
-       console.log(km);
-   }
+        if(km === '' || isNaN(km)){
+            alert('Devi inserire valori corretti')
+           
+            } 
+        console.log(km);
 })
 // if(parseInt(km)){  
 //  }else{
