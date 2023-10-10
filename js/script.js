@@ -47,7 +47,7 @@ button.addEventListener('click',
               document.getElementById('numeroCarrozza').innerHTML = `
               ${carrozza}
               `
-              document.getElementById('numeroCp').innerHTML = `
+              document.getElementById('numeroCP').innerHTML = `
               ${numeroCP}
               `
               
