@@ -40,7 +40,7 @@ button.addEventListener('click',
 
             if(age === 'minorenne'){
                 document.getElementById('tipoBiglietto').innerHTML = `
-                ${name}
+                ${age}
             `
             }else if(age ==='Over 65'){
                 document.getElementById('tipoBiglietto').innerHTML = `
