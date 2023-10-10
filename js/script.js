@@ -38,6 +38,20 @@ button.addEventListener('click',
                 ${result.toFixed(2)}
             `
 
+            function passengerCarNumGenerator(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) + min)
+              }
+              carrozza = passengerCarNumGenerator(1, 10);
+              numeroCP = passengerCarNumGenerator(90000, 100000);
+
+              document.getElementById('numeroCarrozza').innerHTML = `
+              ${carrozza}
+              `
+              document.getElementById('numeroCp').innerHTML = `
+              ${numeroCP}
+              `
+              
+
             if(age === 'minorenne'){
                 document.getElementById('tipoBiglietto').innerHTML = `
                 ${age}
@@ -52,6 +66,8 @@ button.addEventListener('click',
             `
             }
             biglietto.classList.remove('d-none');
+            
+            
         }
 })
 // if(parseInt(km)){  
