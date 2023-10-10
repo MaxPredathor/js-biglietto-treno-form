@@ -4,15 +4,32 @@ const tariffa = 0.21;
 const scontoVenti = 20/100;
 const scontoQuaranta = 40/100
 
-// let km = prompt('Inserisci i kilometri che devi percorrere')
 
+const button = document.querySelector('.btn-primary');
+console.log(button);
+
+button.addEventListener('click', function(){
+    const name = document.getElementById('nameInput').value;
+    const km = parseInt(document.getElementById('km').value);
+   if(name === '' || typeof name === 'number'){
+       alert('Devi inserire valori corretti')
+       console.log(name);
+       console.log(km);
+   }else if(km === '' || isNaN(km)){
+       alert('Devi inserire valori corretti')
+       console.log(name);
+       console.log(km);
+   } else{
+       console.log(name);
+       console.log(km);
+   }
+})
 // if(parseInt(km)){  
 //  }else{
 //      alert('Questo non è un kilometraggio valido, reinserire il valore')
 //      window.location.reload()
 // }
 
-// let età = prompt('Insereisci la tua età');
 
 // if(parseInt(età)){  
 // }else{
